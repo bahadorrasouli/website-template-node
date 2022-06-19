@@ -4,6 +4,9 @@ const app = express();
 
 const fetch = require('node-fetch');
 
+const companies = 'https://my.api.mockaroo.com/companies_fake_data.json?key=ced71540'
+
+
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -12,8 +15,11 @@ app.set('views ', './views');
 
 // routes
 app.get('/', (req,res)=>{
-  res.render('home',{name:'Mr.Babak'});
+  fetch(companies)
+  .then(response => response.json())
+  .then(data => res.render('home',{data}));
 });
+
 
 // server
 app.listen(3000, () => console.log('listening on port 3000') );
