@@ -32,6 +32,10 @@
   font-weight: 400;
 }
 
+.star-rate{
+  display: flex;
+}
+
 .star-rate .empty{
   fill: none; 
   stroke: #6e6e6e; 
@@ -40,4 +44,9 @@
 
 .star-rate .fill{
   fill: #edbc00;
+}
+
+.name-container{
+  display: flex;
+  align-items: center;
 }
