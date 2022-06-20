@@ -17,7 +17,7 @@ app.set('views ', './views');
 app.get('/', (req,res)=>{
   fetch(companies)
   .then(response => response.json())
-  .then(data => res.render('home',{data}));
+  .then(data => res.render('home',{data, title: 'Main Page'}));
 });
 
 app.get('/companies/:id', (req,res)=>{
