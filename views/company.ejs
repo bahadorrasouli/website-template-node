@@ -9,6 +9,7 @@
   <div style="display: flex; flex-direction:column;">
     <h1 style="font-weight: 900;">Company <%= data.company_name %></h1>
     <h3 style="font-weight: 400;">Manager: <%= data.manager_name %> </h3>
+    <!-- star-rate component-->
     <%- include('components/star-rate', {rate:data.rate}) %> 
     <p><%= data.content  %> </p>
   </div>
