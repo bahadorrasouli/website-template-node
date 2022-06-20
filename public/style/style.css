@@ -4,3 +4,40 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr; gap: 20px;
+}
+
+.company-container img{
+  width: 100%;
+}
+
+.company-container .content{
+  display: flex;
+  flex-direction:column;
+}
+
+.company-container .content h1{
+  font-weight: 900;
+}
+
+.company-container .content h3{
+  font-weight: 400;
+}
+
+.star-rate .empty{
+  fill: none; 
+  stroke: #6e6e6e; 
+  stroke-width: 2px;
+}
+
+.star-rate .fill{
+  fill: #edbc00;
+}

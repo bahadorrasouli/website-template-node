@@ -5,13 +5,13 @@
   <!-- make color sting standard for URL-->
   <% let color = data.color.split("#") %> 
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+  <div class="company-container">
     <div>
-      <img style="width: 100%;" src="https://dummyimage.com/600x400/<%= color %>/fff.jpg" alt="">
+      <img src="https://dummyimage.com/600x400/<%= color %>/fff.jpg" alt="">
     </div>
-    <div style="display: flex; flex-direction:column;">
-      <h1 style="font-weight: 900;">Company <%= data.company_name %></h1>
-      <h3 style="font-weight: 400;">Manager: <%= data.manager_name %> </h3>
+    <div class="content">
+      <h1>Company <%= data.company_name %></h1>
+      <h3>Manager: <%= data.manager_name %> </h3>
       <!-- star-rate component-->
       <%- include('components/star-rate', {rate:data.rate}) %> 
       <p><%= data.content  %> </p>
