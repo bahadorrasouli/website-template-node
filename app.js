@@ -20,6 +20,20 @@ app.get('/', (req,res)=>{
   .then(data => res.render('home',{data}));
 });
 
+app.get('/companies/:id', (req,res)=>{
+  
+  fetch(companies)
+  .then(response => response.json())
+  .then(data => {
+    data.find(company=>{
+      if(company.id == req.params.id){
+        res.render('company',{data : company})
+      }
+    })
+  });
+
+});
+
 
 // server
 app.listen(3000, () => console.log('listening on port 3000') );
