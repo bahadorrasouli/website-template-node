@@ -1,4 +1,16 @@
+<!-- Test Style & container Test-->
+<div style="display: flex; flex-wrap: wrap;">
 <% data.forEach(data => { %>
-  <h1><%= data.id %></h1>
-  <h1><%= data.company_name %></h1>
+    <!-- test style-->
+    <div style="max-width: 300px; display: flex; flex-direction: column; margin: 20px;">
+      <img src="https://dummyimage.com/600x400/<%= data.color %>/fff.jpg" style="width: 100%;" alt="">
+      <h3><%= data.company_name %></h3>
+      <div>
+        <div></div>
+        <h5><%= data.manager_name %></h5>
+      </div>
+      <div>rate: <%= data.rate %></div>
+    </div>
+  
 <% }); %>
+</div>
