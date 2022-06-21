@@ -12,13 +12,13 @@
   </div>
   <div class="flex items-baseline gap-14 font-bold">
     <nav>
-      <ul class="flex gap-10">
-        <li class="hover:text-primary"><a href="/">Home</a></li>
-        <li class="hover:text-primary"><a href="#">Services</a></li>
-        <li class="hover:text-primary"><a href="#">Team</a></li>
-        <li class="hover:text-primary"><a href="#">About</a></li>
-        <li class="hover:text-primary"><a href="#">News</a></li>
-        <li class="hover:text-primary"><a href="#">Contact</a></li>
+      <ul class="flex gap-10"><% if(pageName !== 'home'){ %> class="hover:text-primary"<% } %> 
+        <li <% if(pageName !== 'home'){ %> class="hover:text-primary"<% } %> ><a href="/">Home</a></li>
+        <li <% if(pageName !== 'services'){ %> class="hover:text-primary"<% } %> ><a href="#">Services</a></li>
+        <li <% if(pageName !== 'team'){ %> class="hover:text-primary"<% } %> ><a href="#">Team</a></li>
+        <li <% if(pageName !== 'about'){ %> class="hover:text-primary"<% } %> ><a href="#">About</a></li>
+        <li <% if(pageName !== 'news'){ %> class="hover:text-primary"<% } %> ><a href="#">News</a></li>
+        <li <% if(pageName !== 'contact'){ %> class="hover:text-primary"<% } %> ><a href="#">Contact</a></li>
       </ul>
     </nav>
     <a class="bg-primary px-10 py-5 text-white hover:bg-secondary" href="#">Get Free Ad</a>
