@@ -2,6 +2,8 @@
 <html lang="en">
 <%- include('components/head', {title : data.company_name}) %>
 <body>
+  <!-- main-header-->
+  <%- include('components/main-header',{pageName: 'company'}) %>
   <!-- make color sting standard for URL-->
   <% let color = data.color.split("#") %> 
 
