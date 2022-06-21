@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('components/head', {title}) %>
-<body>
-    <div class="card-list">
-    <% data.forEach(data => { %>
-    
-        <%- include('components/card', {data}) %> 
-      
-    <% }); %>
-    </div>
+<body class="text-slate-800 text-base">
+    <%- include('components/card-list', {data}) %>
 </body>
 </html>
