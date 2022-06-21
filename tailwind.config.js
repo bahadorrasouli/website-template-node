@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors:{
         primary : '#efab23',
-        secondary : '2b2d42',
+        secondary : '#2b2d42',
       },
       fontFamily:{
         handwriting : ['Pacifico', 'cursive'],
