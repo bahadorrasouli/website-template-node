@@ -5,6 +5,18 @@ const app = express();
 const fetch = require('node-fetch');
 
 const companies = 'https://my.api.mockaroo.com/companies_fake_data.json?key=ced71540'
+const statestics = 'https://my.api.mockaroo.com/statestics.json?key=ced71540';
+
+const apis = [
+  {
+    url: companies,
+    id : 'companies'
+  },
+  {
+    url: statestics,
+    id : 'statestics'
+  }
+];
 
 
 app.use(express.json());
@@ -15,9 +27,27 @@ app.set('views ', './views');
 
 // routes
 app.get('/', (req,res)=>{
-  fetch(companies)
-  .then(response => response.json())
-  .then(data => res.render('home',{data, title: 'Main Page'}));
+
+  let requests = apis.map(item => fetch(item.url).then(response => response.json()));
+  
+  const resultData = [];
+  Promise.all(requests).then(
+    
+    datas => { 
+      datas.forEach(
+        (data, i) => {
+          resultData[apis[i].id] = {...{data}}
+        });
+        
+      res.render('home',{
+        companies: resultData.companies.data,
+        statestics: resultData.statestics.data,
+        title: 'Main Page',
+      })
+    }
+    
+  );
+  // res.render('home');
 });
 
 app.get('/companies/:id', (req,res)=>{
