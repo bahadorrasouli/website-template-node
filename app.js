@@ -4,8 +4,8 @@ const app = express();
 
 const fetch = require('node-fetch');
 
-const companies = 'https://my.api.mockaroo.com/companies_fake_data.json?key=ced71540'
-const statestics = 'https://my.api.mockaroo.com/statestics.json?key=ced71540';
+const companies = 'https://my.api.mockaroo.com/companies.json?key=e3ca41d0';
+const statestics = 'https://my.api.mockaroo.com/statestics.json?key=e3ca41d0';
 
 const apis = [
   {
