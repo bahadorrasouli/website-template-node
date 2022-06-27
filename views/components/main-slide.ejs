@@ -10,7 +10,7 @@ function makeThousendView(number){
 }
 %> 
 
-<div class="main-slide pb-28">
+<div class="main-slide pb-28 relative">
   <div class="container mx-auto grid gap-32 grid-cols-[1.1fr_1fr]">
 
     <div class="flex flex-col justify-between py-20">
@@ -50,7 +50,7 @@ function makeThousendView(number){
           <img class="z-10" src="img/human.png" alt="">
         </div>
       </div>
-      <div class="bg-secondary pt-12 pr-3">
+      <div class="bg-secondary pt-12 pr-3 z-10">
         <div class="origin-[100%_0%] rotate-90 translate-y-[200%] whitespace-nowrap text-white font-bold">
           <a class="mr-5 hover:text-primary" href="#">Facebook</a>
           <a class="mr-5 hover:text-primary" href="#">Twitter</a>
@@ -60,5 +60,5 @@ function makeThousendView(number){
     </div>
     
   </div>
-  <div></div>
+  <div class="absolute top-0 right-0 w-1/4 h-[100%] bg-secondary z-0"></div>
 </div>
