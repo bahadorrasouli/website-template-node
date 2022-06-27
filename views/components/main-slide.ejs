@@ -1,3 +1,15 @@
+<!-- function for create number for thousend view -->
+<%
+function makeThousendView(number){
+  if(number>1000){
+    let thousendView = Math.floor(number/1000);
+    return `${thousendView}K`;
+  }else{
+    return number
+  }
+}
+%> 
+
 <div class="main-slide">
   <div class="container mx-auto grid gap-5 grid-cols-[1.1fr_1fr]">
     <div class="flex flex-col justify-center">
@@ -13,16 +25,16 @@
       <div>
         <ul class="flex gap-10">
           <li>
-            <span class="block font-bold text-4xl mb-1"><%= data.projects %></span>
+            <span class="block font-bold text-4xl mb-1"><%= makeThousendView(data.projects) %></span>
             <span class="block uppercase font-semibold text-xs text-primary">Projects</span>
           </li>
           <li>
-            <span class="block font-bold text-4xl mb-1"><%= data.reports %></span>
-            <span class="block uppercase font-semibold text-xs text-primary">Projects</span>
+            <span class="block font-bold text-4xl mb-1"><%= makeThousendView(data.reports) %></span>
+            <span class="block uppercase font-semibold text-xs text-primary">Reports</span>
           </li>
           <li>
-            <span class="block font-bold text-4xl mb-1"><%= data.clicks %></span>
-            <span class="block uppercase font-semibold text-xs text-primary">Projects</span>
+            <span class="block font-bold text-4xl mb-1"><%= makeThousendView(data.clicks) %></span>
+            <span class="block uppercase font-semibold text-xs text-primary">Clicks</span>
           </li>
         </ul>
       </div>
