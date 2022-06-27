@@ -10,9 +10,11 @@ function makeThousendView(number){
 }
 %> 
 
-<div class="main-slide">
-  <div class="container mx-auto grid gap-5 grid-cols-[1.1fr_1fr]">
-    <div class="flex flex-col justify-center">
+<div class="main-slide pb-28">
+  <div class="container mx-auto grid gap-32 grid-cols-[1.1fr_1fr]">
+
+    <div class="flex flex-col justify-between py-20">
+      <div class="bg-primary w-14 h-1"></div>
       <div>
         <h6 class="text-primary text-sm font-medium uppercase">Legalized Since 2002</h6>
         <h1 class="font-bold text-5xl mb-6">People Do Not Win People Fights - <span class="text-primary">Lawyers Do</span></h1>
@@ -40,9 +42,21 @@ function makeThousendView(number){
       </div>
     </div>
     
-    <div class="bg-red-500">
-      <div>images</div>
-      <div>socilas</div>
+    <div class="grid grid-cols-[1fr_40px]">
+      <div class="relative">
+        <div class="absolute w-1/2 h-full bg-secondary top-0 right-0"></div>
+        <div class="absolute w-1/2 h-2/3 bg-primary top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="relative pt-16 flex justify-center">
+          <img class="z-10" src="img/human.png" alt="">
+        </div>
+      </div>
+      <div class="bg-secondary pt-12 pr-3">
+        <div class="origin-[100%_0%] rotate-90 translate-y-[200%] whitespace-nowrap text-white font-bold">
+          <a class="mr-5 hover:text-primary" href="#">Facebook</a>
+          <a class="mr-5 hover:text-primary" href="#">Twitter</a>
+          <a class="hover:text-primary" href="#">Instagram</a>
+        </div>
+      </div>
     </div>
     
   </div>
