@@ -1,13 +1,11 @@
 <% let color = data.color.split("#") %> 
     <!-- test style-->
-    <a href="http://localhost:3000/companies/<%= data.id %>" style="max-width: 300px; display: flex; flex-direction: column; margin: 20px; background-color: #ededed; padding: 15px;">
-      <img src="https://dummyimage.com/600x400/<%= color %>/fff.jpg" style="width: 100%;" alt="">
-      <h3><%= data.company_name %></h3>
-      <div class="name-container">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><g id="_01_align_center" data-name="01 align center"><path d="M21,24H19V18.957A2.96,2.96,0,0,0,16.043,16H7.957A2.96,2.96,0,0,0,5,18.957V24H3V18.957A4.963,4.963,0,0,1,7.957,14h8.086A4.963,4.963,0,0,1,21,18.957Z"/><path d="M12,12a6,6,0,1,1,6-6A6.006,6.006,0,0,1,12,12ZM12,2a4,4,0,1,0,4,4A4,4,0,0,0,12,2Z"/></g></svg>
-        </div>
-        <h5><%= data.manager_name %></h5>
+    <a class="rounded-md bg-gray-100 overflow-hidden p-5 drop-shadow-lg" href="http://localhost:3000/companies/<%= data.id %>">
+      <img class="rounded mb-5" src="https://dummyimage.com/600x400/<%= color %>/fff.jpg" style="width: 100%;" alt="">
+      <h3 class="text-xl font-semibold mb-3"><%= data.company_name %></h3>
+      <div class="flex gap-2 items-center mb-3"> 
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M21,24H19V18.957A2.96,2.96,0,0,0,16.043,16H7.957A2.96,2.96,0,0,0,5,18.957V24H3V18.957A4.963,4.963,0,0,1,7.957,14h8.086A4.963,4.963,0,0,1,21,18.957Z"/><path d="M12,12a6,6,0,1,1,6-6A6.006,6.006,0,0,1,12,12ZM12,2a4,4,0,1,0,4,4A4,4,0,0,0,12,2Z"/></g></svg>
+        <h5 class="text-sm"><%= data.manager_name %></h5>
       </div>
       <%- include('star-rate', {rate:data.rate}) %> 
     </a>
