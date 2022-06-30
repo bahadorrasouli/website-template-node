@@ -19,8 +19,8 @@
   },
 ] %> 
 
-<div class="container mx-auto relative">
-  <div class="absolute -top-28 grid grid-cols-3 drop-shadow-md">
+<div class="container mx-auto relative flex">
+  <div class="-mt-28 grid grid-cols-3 drop-shadow-md">
     <% data.forEach((data,i) => { %>
   
       <%- include('service-item', {data,i}) %>
