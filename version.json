@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "name": "advertising-website-node",
+  "builds": [
+     { "src": "app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+     { "src": "/(.*)", "dest": "/app.js" }
+  ]
+}
